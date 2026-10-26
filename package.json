@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "node --watch src/app.js",
-    "migrate": "node src/db/migrate.js"
+    "migrate": "node src/db/migrate.js",
+    "test": "node tests/api.test.js"
   },
   "keywords": ["ledger", "transactions", "api"],
   "author": "Kushal Dayanand",
