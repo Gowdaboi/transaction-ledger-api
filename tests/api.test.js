@@ -1,6 +1,8 @@
 const http = require('http');
+const https = require('https');
 
-const BASE = 'http://localhost:3000/api';
+const BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
+const BASE = BASE_URL.replace(/\/+$/, '') + '/api';
 let passed = 0;
 let failed = 0;
 const failures = [];
@@ -15,7 +17,8 @@ function request(method, path, body) {
       method,
       headers: { 'Content-Type': 'application/json' }
     };
-    const req = http.request(options, (res) => {
+    const transport = url.protocol === 'https:' ? https : http;
+    const req = transport.request(options, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
