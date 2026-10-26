@@ -9,6 +9,12 @@ A backend API for a simple transaction ledger system. Users can create accounts,
 - **Database:** PostgreSQL (hosted on Supabase)
 - **Hosting:** Render (free tier)
 
+## Live Deployment
+
+**Production URL:** https://transaction-ledger-api-8xej.onrender.com
+
+**GitHub Repository:** https://github.com/Gowdaboi/transaction-ledger-api
+
 ## Project Structure
 
 ```
@@ -40,7 +46,7 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/transaction-ledger-api.git
+   git clone https://github.com/Gowdaboi/transaction-ledger-api.git
    cd transaction-ledger-api
    ```
 
@@ -55,7 +61,7 @@ src/
    ```
    Edit `.env` and add your Supabase Postgres connection string:
    ```
-   DATABASE_URL=postgresql://postgres.[YOUR-PROJECT-REF]:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres
+   DATABASE_URL=postgresql://postgres.[YOUR-PROJECT-REF]:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres
    PORT=3000
    ```
 
@@ -97,7 +103,11 @@ See [API Documentation](docs/API.md) for detailed request/response examples.
 4. Set the following:
    - **Build Command:** `npm install`
    - **Start Command:** `npm start`
-5. Add environment variables (`DATABASE_URL`, `PORT`) in the Render dashboard.
+5. Add environment variables in the Render dashboard:
+   - `DATABASE_URL` — your Supabase Postgres connection string
+   - `NODE_ENV` — set to `production` (enables SSL for the database connection)
+   
+   Render provides `PORT` automatically; do not set it manually.
 6. Deploy.
 
 ## Author

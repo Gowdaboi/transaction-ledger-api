@@ -1,6 +1,7 @@
 # API Documentation
 
-**Base URL:** `http://localhost:3000/api`
+**Base URL (local):** `http://localhost:3000/api`
+**Base URL (production):** `https://transaction-ledger-api-8xej.onrender.com/api`
 
 All request and response bodies use JSON. All timestamps are in ISO 8601 format (UTC).
 
