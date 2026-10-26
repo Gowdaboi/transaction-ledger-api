@@ -12,6 +12,9 @@
   "keywords": ["ledger", "transactions", "api"],
   "author": "Kushal Dayanand",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
